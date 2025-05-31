@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education - Devadathan PR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <div class="circle-dot"></div>
+      <span class="name">Devadathan PR</span>
+      <span class="title">Computer Application Graduate</span>
+    </div>
+    <nav>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="skills.html" class="nav-link">Skills</a>
+      <a href="education.html" class="nav-link active">Education</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Education Section -->
+    <section id="education" class="section active">
+      <div class="content-card">
+        <h2>Educational Background</h2>
+        <div class="education-timeline">
+          <div class="education-item">
+            <h3>Master of Computer Applications (MCA)</h3>
+            <p class="institution">Currently Pursuing</p>
+            <p class="status">In Progress</p>
+          </div>
+          <div class="education-item">
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+            <p class="institution">Girideepam Institute of Advanced Learning</p>
+            <p class="status">Completed</p>
+          </div>
+          <div class="education-item">
+            <h3>Higher Secondary Education (12th)</h3>
+            <p class="institution">NSS HSS Anickadu</p>
+            <p class="status">Completed</p>
+          </div>
+          <div class="education-item">
+            <h3>Secondary Education (10th)</h3>
+            <p class="institution">MGM NSS HSS Lakkattoor</p>
+            <p class="status">Completed</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Add smooth animations on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe all content cards
+    document.querySelectorAll('.content-card').forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devadathan PR - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <div class="circle-dot"></div>
+      <span class="name">PORTFOLIO</span>
+      <span class="title"></span>
+    </div>
+    <nav>
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="skills.html" class="nav-link">Skills</a>
+      <a href="education.html" class="nav-link">Education</a>
+      <a href="cont.html" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Home Section -->
+    <section id="home" class="section active">
+      <div class="home-section">
+        <img src="dp.jpg" alt="Devadathan PR" class="profile-img" />
+        <div class="profile-info">
+          <h1>Devadathan PR</h1>
+          <h3>A Bit About Me</h3>
+          <p>
+            I am a Computer Application graduate with a passion for web development and technology. 
+            I specialize in creating modern, responsive websites and have experience in various 
+            programming languages. I'm always eager to learn new technologies and take on challenging projects.
+          </p>
+          <div class="nav-buttons">
+            <a href="skills.html" class="nav-button skills-btn">Skills</a>
+            <a href="education.html" class="nav-button education-btn">Education</a>
+            <a href="contact.html" class="nav-button contact-btn">Contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Add smooth animations on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe all content cards
+    document.querySelectorAll('.content-card').forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+</body>
+</html>
